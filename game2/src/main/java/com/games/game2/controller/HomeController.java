@@ -15,7 +15,6 @@ public class HomeController {
     @GetMapping("/")
     public String home() {
         log.info(testService.selectOne().toString());
-        log.error("this debug: ","hey");
         return "index.html";
     }
 }
