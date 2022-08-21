@@ -109,7 +109,7 @@ public class StringUtils {
     }
 
     //특수문자 검사기(특수문자가 있는 경우 true, 공백은 통과)
-    public boolean isSpecial(String str, int minLength, int maxLength){
+    public static boolean isSpecial(String str, int minLength, int maxLength){
         if(str == null) str = "";
         String boo = "^[0-9|a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|]" + "{" + minLength + "," +  maxLength + "}" + "$";
         return !Pattern.matches(boo, str);
@@ -123,7 +123,7 @@ public class StringUtils {
     }
     
     // 숫자 이외가 있다면 true
-    public boolean isNotNumeric(String str, int minLength, int maxLength) {
+    public static boolean isNotNumeric(String str, int minLength, int maxLength) {
         if(str == null) str = "";
         String boo = "^[0-9]" + "{" + minLength + ","  + maxLength + "}" + "$";
         return !Pattern.matches(boo, str);
@@ -165,7 +165,7 @@ public class StringUtils {
     }
 
     // 이메일 검사기
-    public boolean isEmail(String str) {
+    public static boolean isEmail(String str) {
         if(str == null) str = "";
         return Pattern.matches("^[a-z0-9A-Z._-]*@[a-z0-9A-Z]*.[a-zA-Z.]*$", str);
     }
