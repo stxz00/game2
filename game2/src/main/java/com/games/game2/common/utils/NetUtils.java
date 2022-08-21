@@ -1,4 +1,4 @@
-package com.games.game2.utils;
+package com.games.game2.common.utils;
 
 import javax.servlet.http.HttpServletRequest;
 

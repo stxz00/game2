@@ -1,6 +1,6 @@
 package com.games.game2.config;
 
-import com.games.game2.interceptor.LoggerInterceptor;
+import com.games.game2.common.interceptor.LoggerInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,18 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/resources/**")
                 .addResourceLocations("/resources/", "classpath:/resources");
 
-
+//        registry.addResourceHandler("/v/**/*")
+//                .addResourceLocations("classpath:/static/")
+//                .resourceChain(true)
+//                .addResolver(new PathResourceResolver() {
+//                    @Override
+//                    protected Resource getResource(String resourcePath,
+//                                                   Resource location) throws IOException {
+//                        Resource requestedResource = location.createRelative(resourcePath);
+//                        return requestedResource.exists() && requestedResource.isReadable() ? requestedResource
+//                                : new ClassPathResource("/static/index.html");
+//                    }
+//                });
     }
 
     @Override

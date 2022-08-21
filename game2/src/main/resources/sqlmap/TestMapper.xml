@@ -4,5 +4,10 @@
     <select id="selectOne" resultType="com.games.game2.domain.TestParam">
         select * from my_practice where NUM=1
     </select>
-
+    <select id="getTotalCnt" resultType="_int">
+        select count(*) from my_practice
+        <if test="searchNm != null and searchNm != ''">
+            AND c.PATIENTS_ID = #{searchNm}
+        </if>
+    </select>
 </mapper>

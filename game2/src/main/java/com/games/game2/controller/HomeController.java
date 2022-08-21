@@ -13,8 +13,9 @@ public class HomeController {
     TestService testService;
 
     @GetMapping("/")
-    public String home() {
+    public String home() throws Exception {
         log.info(testService.selectOne().toString());
+
         return "index.html";
     }
 }

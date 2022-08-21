@@ -1,6 +1,6 @@
-package com.games.game2.interceptor;
+package com.games.game2.common.interceptor;
 
-import com.games.game2.utils.NetUtils;
+import com.games.game2.common.utils.NetUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;

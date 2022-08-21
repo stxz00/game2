@@ -17,3 +17,6 @@ spring:
 mybatis:
     config: mybatis-config.xml
     mapper-locations: classpath:sqlmap/**/*.xml
+
+upload:
+    downloadpath: C:\Users\user\Desktop\mypractice\downloadfile
